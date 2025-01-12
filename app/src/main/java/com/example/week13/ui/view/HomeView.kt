@@ -69,6 +69,7 @@ fun HomeScreen(
             retryAction = { viewModel.getMahasiswa() }, modifier = Modifier.padding(innerPadding),
             onDetailClick = onDetailClick,
             onDeleteClick = {
+//                viewModel.deleteMahasiswa(it)
                 viewModel.getMahasiswa()
             }
         )

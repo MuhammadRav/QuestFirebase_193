@@ -80,16 +80,16 @@ fun InsertMahasiswaView(
     Scaffold (
         modifier = modifier,
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
-        topBar = {
-            TopAppBar(
-                title = { Text("Tambah Mahasiswa") },
-                navigationIcon = {
-                    Button(onClick = onBack) {
-                        Text("Back")
-                    }
-                }
-            )
-        }
+//        topBar = {
+//            TopAppBar(
+//                title = { Text("Tambah Mahasiswa") },
+//                navigationIcon = {
+//                    Button(onClick = onBack) {
+//                        Text("Back")
+//                    }
+//                }
+//            )
+//        }
     ){ padding ->
         Column(
             modifier = Modifier
