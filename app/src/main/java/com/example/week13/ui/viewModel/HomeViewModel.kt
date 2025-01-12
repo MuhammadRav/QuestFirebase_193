@@ -23,10 +23,10 @@ class HomeViewModel(
     var mhsUiState: HomeUiState by mutableStateOf(HomeUiState.Loading)
         private set
     init {
-        getMhs()
+        getMahasiswa()
     }
 
-    fun getMhs(){
+    fun getMahasiswa(){
         viewModelScope.launch {
             mhs.getAllMahasiswa()
                 .onStart {
