@@ -12,7 +12,7 @@ class NetworkMahasiswaRepository(
     private val firestore: FirebaseFirestore
 
 ): MahasiswaRepository {
-    override suspend fun getAllMahasiswa(): Flow<List<Mahasiswa>> = callbackFlow{
+    override fun getAllMahasiswa(): Flow<List<Mahasiswa>> = callbackFlow{
         val mhsCollection = firestore.collection("Mahasiswa")
             .orderBy("nim", Query.Direction.ASCENDING)
             .addSnapshotListener{ value, error ->
@@ -60,7 +60,7 @@ class NetworkMahasiswaRepository(
         }
     }
 
-    override suspend fun getMahasiswa(nim: String): Flow<Mahasiswa> = callbackFlow{
+    override fun getMahasiswa(nim: String): Flow<Mahasiswa> = callbackFlow{
         val mhsDocument = firestore.collection("Mahasiswa")
             .document(nim)
             .addSnapshotListener { value, error ->

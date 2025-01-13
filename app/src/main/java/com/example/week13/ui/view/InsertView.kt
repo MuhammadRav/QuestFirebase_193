@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -38,6 +39,7 @@ import com.example.week13.ui.viewModel.PenyediaViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun InsertMahasiswaView(
     onBack: () -> Unit,
@@ -80,16 +82,16 @@ fun InsertMahasiswaView(
     Scaffold (
         modifier = modifier,
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
-//        topBar = {
-//            TopAppBar(
-//                title = { Text("Tambah Mahasiswa") },
-//                navigationIcon = {
-//                    Button(onClick = onBack) {
-//                        Text("Back")
-//                    }
-//                }
-//            )
-//        }
+        topBar = {
+            TopAppBar(
+                title = { Text("Tambah Mahasiswa") },
+                navigationIcon = {
+                    Button(onClick = onBack) {
+                        Text("Back")
+                    }
+                }
+            )
+        }
     ){ padding ->
         Column(
             modifier = Modifier

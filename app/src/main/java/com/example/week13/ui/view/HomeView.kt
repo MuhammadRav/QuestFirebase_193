@@ -70,7 +70,7 @@ fun HomeScreen(
             onDetailClick = onDetailClick,
             onDeleteClick = {
 //                viewModel.deleteMahasiswa(it)
-                viewModel.getMahasiswa()
+//                viewModel.getMahasiswa()
             }
         )
     }

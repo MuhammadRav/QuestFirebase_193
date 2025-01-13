@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.week13.navigasi.PengelolaHalaman
 import com.example.week13.ui.theme.Week13Theme
 import com.example.week13.ui.view.HomeScreen
 
@@ -21,7 +22,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             Week13Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen(navigateToItemEntry = {}, modifier = Modifier.padding(innerPadding)
+                    PengelolaHalaman(
+//                        navigateToItemEntry = {},
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
