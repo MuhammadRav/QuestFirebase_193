@@ -70,7 +70,7 @@ fun HomeScreen(
             onDetailClick = onDetailClick,
             onDeleteClick = {
 //                viewModel.deleteMahasiswa(it)
-//                viewModel.getMahasiswa()
+                viewModel.getMahasiswa()
             }
         )
     }
@@ -194,7 +194,7 @@ fun MhsCard(
                 )
             }
             Text(
-                text = mahasiswa.kelas,
+                text = mahasiswa.skripsi,
                 style = MaterialTheme.typography.titleMedium
             )
             Text(

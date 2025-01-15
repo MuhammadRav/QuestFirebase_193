@@ -7,9 +7,12 @@ data class Mahasiswa(
     val jenis_kelamin: String,
     val kelas: String,
     val angkatan: String,
+    val skripsi: String,
+    val dosen1: String,
+    val dosen2: String
 ){
     // nilai default
     constructor(
 
-    ):this("","","","","","")
+    ):this("","","","","","","","","")
 }
